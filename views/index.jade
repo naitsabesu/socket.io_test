@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 title
+  div#login
+    p Nickname:
+      input#nickname
+      
+  
+  div#chat
+    ul#messages
+    div
+      input#message(type='text')
+      input(type='submit',value='Enviar')
