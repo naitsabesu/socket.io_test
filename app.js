@@ -36,12 +36,5 @@ server.listen(app.get('port'), function(){
 });
 
 
-// sockets
-io.sockets.on('connection', function(socket){
-	console.log('Client connected... ');
-
-	socket.on('set_nickname', function(n){
-		console.log('mensaje recibido: '+ n);
-	});
-});
+require('./io')(io);
 
